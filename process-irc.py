@@ -32,6 +32,7 @@ logger.debug("Starting...")
 
 log_dir = os.getenv("LOG_DIR", "/u01/home/robin/GIT/irc-import/logs")
 
+# Tested here: https://regex101.com/r/FNxiHo/1
 message_re = "^\[(?P<hours>\d\d):(?P<mins>\d\d):(?P<seconds>\d\d)\] (?:\*\*\* )?(?:\* )?(?:Mode )?(?P<name>[a-zA-Z0-9|]+)(?:_)?(?:>)? (?P<message>.*)$"
 message_re_comp = re.compile(message_re)
 
